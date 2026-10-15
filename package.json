@@ -1,0 +1,48 @@
+{
+  "name": "dsh-compaction-codex",
+  "version": "0.0.1",
+  "description": "Codex-style window-swap compaction engine: deterministic pointer-template summaries with zero LLM calls, replacing the default LLM-summary compaction.",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0",
+    "@deepseek-ai/dsh-compaction-basic": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "author": "r-ayin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-ayin/dsh-compaction-codex.git"
+  },
+  "homepage": "https://github.com/r-ayin/dsh-compaction-codex#readme",
+  "bugs": {
+    "url": "https://github.com/r-ayin/dsh-compaction-codex/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
